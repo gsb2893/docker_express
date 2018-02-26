@@ -11,6 +11,8 @@ var app = express();
 app.get('/', function(req, res) {
     if(basic_auth != null){
         console.log('Its working!');
+    }else{
+        console.log("no authentic!");
     }
   });
 
