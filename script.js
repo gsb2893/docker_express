@@ -1,6 +1,6 @@
 var express = require('express');
 
-const Request = require("./piau");
+const basic_auth = process.env.BASIC_AUTH;
 
 const port = process.env.PORT | 3000;
 
@@ -9,7 +9,9 @@ const port = process.env.PORT | 3000;
 var app = express();
 
 app.get('/', function(req, res) {
-    Request._test();
+    if(basic_auth != null){
+        console.log('Its working!');
+    }
   });
 
 var server = app.listen(port); 
