@@ -1,7 +1,13 @@
 var express = require('express');
+
+const port = process.env.PORT | 3000;
+
+logger.info('Starting node server on port:', port);
+
 var app = express();
-/*app.use(
-     "/", //the URL throught which you want to access to you static content
-     express.static(__dirname) //where your static content is located in your filesystem
-);*/
-app.listen(3000); //the port you want to use
+
+app.get('/', (req, res)){
+    console.log('Its working!');
+}
+
+var server = app.listen(port); 
