@@ -6,8 +6,8 @@ logger.info('Starting node server on port:', port);
 
 var app = express();
 
-app.get('/', (req, res)){
+app.get('/', function(req, res) {
     console.log('Its working!');
-}
+  });
 
 var server = app.listen(port); 
