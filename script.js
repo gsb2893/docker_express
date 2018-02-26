@@ -1,5 +1,7 @@
 var express = require('express');
 
+const Request = require("piau");
+
 const port = process.env.PORT | 3000;
 
 //logger.info('Starting node server on port:', port);
@@ -7,7 +9,7 @@ const port = process.env.PORT | 3000;
 var app = express();
 
 app.get('/', function(req, res) {
-    console.log('Its working!');
+    Request._test();
   });
 
 var server = app.listen(port); 
